@@ -1,0 +1,38 @@
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.csproj.AssemblyReference.cache
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen_Görevlendirme.Form1.resources
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.csproj.GenerateResource.cache
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.AssemblyInfoInputs.cache
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.AssemblyInfo.cs
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.csproj.CoreCompileInputs.cache
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\bin\Debug\net6.0-windows\Öğretmen Görevlendirme.exe
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\bin\Debug\net6.0-windows\Öğretmen Görevlendirme.deps.json
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\bin\Debug\net6.0-windows\Öğretmen Görevlendirme.runtimeconfig.json
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\bin\Debug\net6.0-windows\Öğretmen Görevlendirme.dll
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\bin\Debug\net6.0-windows\Öğretmen Görevlendirme.pdb
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\bin\Debug\net6.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.csproj.CopyComplete
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.dll
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\refint\Öğretmen Görevlendirme.dll
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.pdb
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.genruntimeconfig.cache
+C:\Users\KaanBALKAYA\source\repos\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\ref\Öğretmen Görevlendirme.dll
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\bin\Debug\net6.0-windows\Öğretmen Görevlendirme.exe
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\bin\Debug\net6.0-windows\Öğretmen Görevlendirme.deps.json
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\bin\Debug\net6.0-windows\Öğretmen Görevlendirme.runtimeconfig.json
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\bin\Debug\net6.0-windows\Öğretmen Görevlendirme.dll
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\bin\Debug\net6.0-windows\Öğretmen Görevlendirme.pdb
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\bin\Debug\net6.0-windows\DocumentFormat.OpenXml.dll
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.csproj.AssemblyReference.cache
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen_Görevlendirme.Form1.resources
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.csproj.GenerateResource.cache
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.AssemblyInfoInputs.cache
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.AssemblyInfo.cs
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.csproj.CoreCompileInputs.cache
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.csproj.CopyComplete
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.dll
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\refint\Öğretmen Görevlendirme.dll
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.pdb
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\Öğretmen Görevlendirme.genruntimeconfig.cache
+C:\Users\kaan\source\repos\atama\Öğretmen Görevlendirme\Öğretmen Görevlendirme\obj\Debug\net6.0-windows\ref\Öğretmen Görevlendirme.dll

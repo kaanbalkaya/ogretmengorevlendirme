@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "VV8vrdqem4juGRuNKNEN2QCzO5T6f+zVDtgMVwnbU1zUIX/sS6X77a+NSGogIg1l+yg0awzDPkxTUpFkskNPXg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kaan\\source\\repos\\atama\\Öğretmen Görevlendirme\\Öğretmen Görevlendirme\\Öğretmen Görevlendirme.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kaan\\.nuget\\packages\\documentformat.openxml\\2.20.0\\documentformat.openxml.2.20.0.nupkg.sha512",
+    "C:\\Users\\kaan\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

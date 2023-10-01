@@ -1,0 +1,379 @@
+﻿WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
+            WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
+            SheetData sheetData = worksheetPart.Worksheet.Elements<SheetData>().First();
+            var stringTable = spreadsheetDocument.WorkbookPart.GetPartsOfType<SharedStringTablePart>().First();
+
+
+            if (stringTable == null)
+            {
+                textBox1.Text = "stringable not found, sorry!!!";
+                return;
+            }
+
+
+
+
+            //i=1 ile başlık satırı atlanıyor
+            for (int i = 1; i < sheetData.Elements<Row>().Count<Row>(); ++i)
+            {
+                var r = sheetData.ElementAt(i);
+               
+                int cell_index = 0;
+                string value=string.Empty;
+                foreach (Cell c in r.Elements<Cell>())
+                {
+
+                    value = c.InnerText;
+                    if (value == "")
+                        break;
+                    if (c.DataType != null)
+                    {
+
+                        switch (c.DataType.Value)
+                        {
+                            case CellValues.SharedString:
+
+                                value = stringTable.SharedStringTable.ElementAt(int.Parse(value)).InnerText;
+
+                                break;
+
+                            case CellValues.Boolean:
+                                switch (value)
+                                {
+                                    case "0":
+                                        value = "FALSE";
+                                        break;
+                                    default:
+                                        value = "TRUE";
+                                        break;
+                                }
+                                break;
+                        }
+
+                    }
+
+
+                   
+                }
+                textBox1.Text+=value+"\n";W
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ static void ReadExcelFileDOM(SpreadsheetDocument spreadsheetDocument)
+        {
+            WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
+            WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
+            SheetData sheetData = worksheetPart.Worksheet.Elements<SheetData>().First();
+            var stringTable = spreadsheetDocument.WorkbookPart.GetPartsOfType<SharedStringTablePart>().First();
+        
+
+            if (stringTable == null)
+            {
+                //myTextBox.Text = "stringable not found, sorry!!!";
+                return;
+            }
+
+         
+
+            string[] titles = { "id", "tc_number", "name", "surname", "birthdate", "gender", "nationality" };
+            Dictionary<string, string> student_data = new Dictionary<string, string>();
+
+          
+            //i=1 ile başlık satırı atlanıyor
+            for (int i=1;i< sheetData.Elements<Row>().Count<Row>();++i)  
+            {   
+                var r=sheetData.ElementAt(i);
+                foreach (var title in titles)
+                {
+                    student_data[title] = "";
+                }
+                int cell_index = 0;
+                foreach (Cell c in r.Elements<Cell>())
+                {   
+                                        
+                    var value=c.InnerText;
+                    if(value=="")
+                        break;
+                    if (c.DataType != null)
+                    {
+                      
+                        switch (c.DataType.Value)
+                        {
+                            case CellValues.SharedString:
+
+                                value = stringTable.SharedStringTable.ElementAt(int.Parse(value)).InnerText;
+
+                                break;
+                          
+                            case CellValues.Boolean:
+                                switch (value)
+                                {
+                                    case "0":
+                                        value = "FALSE";
+                                        break;
+                                    default:
+                                        value = "TRUE";
+                                        break;
+                                }
+                                break;
+                        }
+
+                    }
+                  
+                   
+                    student_data[titles[cell_index++]] = value;
+                }
+
+                if (student_data["id"] != "" ) {  
+                    var student= new Student(student_data);
+                    MainPage.students.Add(student);
+                    if(student.is_girl())
+                        MainPage.students_girls.Add(student);
+                    else
+                        MainPage.students_boys.Add(student);
+                }
+               
+              
+            }
+
+
+        }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
+                WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
+                SheetData sheetData = worksheetPart.Worksheet.Elements<SheetData>().First();
+                var stringTable = spreadsheetDocument.WorkbookPart.GetPartsOfType<SharedStringTablePart>().First();
+
+
+                if (stringTable == null)
+                {
+                    textBox1.Text += "stringable not found, sorry!!!";
+
+                    return;
+                }
+                foreach(var s in worksheetPart.Worksheet.Elements<SheetData>().ToList<SheetData>())
+                {
+                    textBox1.Text += s.Elements<Row>().Count<Row>().ToString() + "\n";
+                }
+
+
+
+                for (int i = 0; i < sheetData.Elements<Row>().Count<Row>(); ++i)
+                {
+                    textBox1.Text+=i.ToString();
+                    var r = sheetData.ElementAt<Row>(i);
+                    string bolge=string.Empty;
+                    /*
+                    foreach(Cell c in r.Elements<Cell>())
+                    {
+                        if(c.CellValue.Text.Contains("Sıra"))
+                        {
+                            textBox1.Text += c.CellValue.Text;
+                            var subs=c.CellValue.Text.Split(":");
+                            bolge = subs[1];
+                            bolgeler[bolge]=new List<Okul>();
+                            i+=3;
+                            r = sheetData.ElementAt(i);
+                            break;
+                        }
+                    }
+                    */
+                    int sira=0;
+                    string kurum_kodu=string.Empty;
+                    string kurum_adi=string.Empty;
+
+
+                    for (int j=0;j<3;++j)
+                    {
+
+                        Cell c = (Cell)r.ChildElements.GetItem(j).Cast<Cell>();
+
+                        var value = c.InnerText;
+                        if (value == "")
+                            break;
+
+                        textBox1.Text += c.DataType.ToString();
+
+                        if (c.DataType != null)
+                        {
+
+                            switch (c.DataType.Value)
+                            {
+                                case CellValues.SharedString:
+
+                                    value = stringTable.SharedStringTable.ElementAt(int.Parse(value)).InnerText;
+
+                                    switch (j)
+                                    {
+                                        case 0:
+                                            sira = int.Parse(value);
+                                            break;
+
+                                        case 1:
+                                            kurum_kodu = value;
+
+                                            break;
+                                        case 2:
+                                            kurum_adi = value;
+                                            break;
+                                    }
+
+
+
+                                    break;
+
+                                case CellValues.Boolean:
+                                    switch (value)
+                                    {
+                                        case "0":
+                                            value = "FALSE";
+                                            break;
+                                        default:
+                                            value = "TRUE";
+                                            break;
+                                    }
+                                    break;
+                            }
+
+                        }
+
+                    }
+
+                    textBox1.Text+=kurum_adi+"\n";
+                    bolgeler[bolge].Add(new Okul(sira, kurum_kodu, kurum_adi));
+
+                }
+                //textBox1.Text += bolgeler.Count.ToString();
+
+          
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+             private void ReadBolgeFileDOM(SpreadsheetDocument spreadsheetDocument)
+        {
+            WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
+            WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
+            SheetData sheetData = worksheetPart.Worksheet.Elements<SheetData>().First();
+            var stringTable = spreadsheetDocument.WorkbookPart.GetPartsOfType<SharedStringTablePart>().First();
+
+
+            if (stringTable == null)
+            {
+                textBox1.Text += "stringable not found, sorry!!!";
+                return;
+            }
+
+            string bolge = string.Empty;
+            foreach (var r in sheetData.Elements<Row>())
+            {
+
+                string sira = string.Empty;
+                string kurum_kodu = string.Empty;
+                string kurum_adi = string.Empty;
+
+                int j = 0;
+                foreach (Cell c in r.Elements<Cell>())
+                {
+
+                    var value = c.InnerText;
+                    //textBox1.Text += value + " \n  ";
+                    if (value == "")
+                        break;
+                    if (c.DataType != null)
+                    {
+                        if (c.DataType.Value == CellValues.SharedString)
+                        {
+
+                            value = stringTable.SharedStringTable.ElementAt(int.Parse(value)).InnerText;
+
+                            if (value.Contains("Eğitim Bölgesi"))
+                            {
+                                var subs = value.Split(":");
+                                bolge = subs[1];
+
+                                if (!bolgeler.Keys.Contains<string>(bolge))
+                                {
+                                    bolgeler[bolge] = new List<Okul>();
+                                }
+
+                            }
+
+                            if (value.Contains("Sıra"))
+                                break;
+
+                        }
+
+
+
+                    }
+                    switch (j)
+                    {
+                        case 0:
+                            sira = value; break;
+                        case 1:
+                            kurum_kodu = value; break;
+                        case 2:
+                            kurum_adi = value; break;
+
+                    }
+                    ++j;
+                }
+
+
+                if (bolge != string.Empty && sira != string.Empty && kurum_kodu != string.Empty && kurum_adi != string.Empty)
+                {
+                    //textBox1.Text += kurum_adi + '-';
+                    bolgeler[bolge].Add(new Okul(sira, kurum_kodu, kurum_adi));
+                }
+
+
+            }
+
+            foreach (string k in bolgeler.Keys)
+            {
+                textBox1.Text += k;
+                textBox1.Text += "---------------------------------";
+                textBox1.Text += "\n";
+                foreach (var v in bolgeler[k])
+                {
+                    textBox1.Text += v.toString();
+                    textBox1.Text += "\n";
+                }
+
+            }
+
+        }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ foreach (var okul in bolgeler[bolge])
+            {
+                okullarCombo.Items.Add(okul.toString());
+            }
+
+            okullarCombo.Enabled = true;
+            okullarCombo.Visible = true;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+|| value.Contains("ÖĞRETMEN GÖREVLENDİRME LİSTESİ") || value.Contains("S.N.")
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
